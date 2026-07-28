@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aktualizator danych — Kronika Dynastii</title>
+  <style>
+    body{margin:0;background:#11120f;color:#e8d7ad;font-family:Georgia,serif}
+    main{max-width:850px;margin:48px auto;padding:32px;background:#191914;border:1px solid #7c5d25}
+    h1{color:#d7a84b}.box{padding:22px;border:1px solid #6e4b23;background:#0f100d;margin:20px 0}
+    button,label{display:inline-block;padding:12px 18px;background:#6d1c18;color:#f2d58e;border:1px solid #bd8533;cursor:pointer}
+    button:disabled{opacity:.45;cursor:not-allowed}.ok{color:#9fce8b}.error{color:#ef8d82}
+    code{color:#f2d58e}
+  </style>
+</head>
+<body>
+<main>
+  <h1>Aktualizator danych P1/P2</h1>
+  <p>To narzędzie nie wysyła danych do internetu. Tworzy gotowy plik <code>analyzer-live.js</code>, który należy wgrać do repozytorium GitHub.</p>
+  <div class="box">
+    <h2>Krok 1</h2>
+    <label>Wybierz eksport JSON z Analyzera
+      <input id="file" type="file" accept=".json,application/json" hidden>
+    </label>
+    <p id="status">Nie wybrano pliku.</p>
+  </div>
+  <div class="box">
+    <h2>Krok 2</h2>
+    <button id="download" disabled>Pobierz analyzer-live.js</button>
+    <p>Potem w repozytorium otwórz folder <code>data</code>, usuń starą wersję i wgraj ten plik pod dokładnie tą samą nazwą.</p>
+  </div>
+  <p><a href="index.html#players" style="color:#d7a84b">← Wróć do strony</a></p>
+</main>
+<script>
+let prepared = '';
+const status = document.getElementById('status');
+const download = document.getElementById('download');
+
+function validate(data) {
+  if (!data || Number(data.schema) !== 1) throw new Error('Oczekiwano schema = 1.');
+  if (!data.campaign || !data.players || !data.players.P1 || !data.players.P2) throw new Error('Brakuje campaign lub players P1/P2.');
+  if (!Array.isArray(data.players.P1.events) || !Array.isArray(data.players.P2.events)) throw new Error('Brakuje list wydarzeń P1/P2.');
+}
+
+document.getElementById('file').addEventListener('change', async e => {
+  try {
+    const file = e.target.files[0];
+    if (!file) return;
+    const data = JSON.parse(await file.text());
+    validate(data);
+    prepared = '/* Publiczne dane kampanii P1/P2. */\nwindow.KD_ANALYZER_DATA = ' + JSON.stringify(data, null, 2) + ';\n';
+    status.className = 'ok';
+    status.textContent = `Gotowe: ${data.campaign.name || 'kampania'} — P1: ${data.players.P1.events.length}, P2: ${data.players.P2.events.length}.`;
+    download.disabled = false;
+  } catch (err) {
+    prepared = '';
+    download.disabled = true;
+    status.className = 'error';
+    status.textContent = 'Błąd: ' + err.message;
+  }
+});
+
+download.addEventListener('click', () => {
+  const blob = new Blob([prepared], {type:'text/javascript;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'analyzer-live.js';
+  a.click();
+  URL.revokeObjectURL(url);
+});
+</script>
+</body>
+</html>
