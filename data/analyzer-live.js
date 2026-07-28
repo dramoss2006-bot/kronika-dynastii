@@ -1,11 +1,11 @@
-/* Publiczne dane kampanii P1/P2. */
+/* Publiczne dane kampanii P1/P2 — wygenerowane przez Kronika Analyzer. */
 window.KD_ANALYZER_DATA = {
   "schema": 1,
   "campaign": {
-    "id": 6,
-    "name": "test 6",
-    "created_at": "2026-07-27 15:49:21",
-    "last_import_at": "2026-07-27 15:51:08"
+    "id": 4,
+    "name": "test 4",
+    "created_at": "2026-07-27 15:03:30",
+    "last_import_at": "2026-07-27 15:13:15"
   },
   "players": {
     "P1": {
@@ -16,14 +16,14 @@ window.KD_ANALYZER_DATA = {
           "type_label": "Uwięzienie władcy",
           "category": "internal_politics",
           "category_label": "Polityka wewnętrzna",
-          "date": "2 stycznia 869",
-          "year": 869,
+          "date": "2 stycznia 870",
+          "year": 870,
           "month": 1,
           "day": 2,
           "is_test": false,
           "attributes": {
             "schema": "1",
-            "mod": "0.11.1-e",
+            "mod": "0.11.1-d",
             "category": "internal_politics"
           }
         },
@@ -33,14 +33,14 @@ window.KD_ANALYZER_DATA = {
           "type_label": "Odejście z rady",
           "category": "internal_politics",
           "category_label": "Polityka wewnętrzna",
-          "date": "19 marca 867",
+          "date": "14 listopada 867",
           "year": 867,
-          "month": 3,
-          "day": 19,
+          "month": 11,
+          "day": 14,
           "is_test": false,
           "attributes": {
             "schema": "1",
-            "mod": "0.11.1-e",
+            "mod": "0.11.1-d",
             "category": "internal_politics"
           }
         }
