@@ -5,7 +5,7 @@ window.KD_ANALYZER_DATA = {
     "id": 8,
     "name": "autotest 1",
     "created_at": "2026-07-28 22:13:22",
-    "last_import_at": "2026-07-28 22:14:39"
+    "last_import_at": "2026-07-28 22:15:09"
   },
   "players": {
     "P1": {
