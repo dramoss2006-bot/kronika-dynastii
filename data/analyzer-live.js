@@ -5,11 +5,624 @@ window.KD_ANALYZER_DATA = {
     "id": 8,
     "name": "autotest 1",
     "created_at": "2026-07-28 22:13:22",
-    "last_import_at": "2026-07-28 22:14:09"
+    "last_import_at": "2026-07-28 22:14:39"
   },
   "players": {
     "P1": {
-      "events": []
+      "events": [
+        {
+          "event_id": "TEST_P1_complete_culture_created_0120a",
+          "type": "culture_created",
+          "type_label": "Utworzenie kultury",
+          "category": "culture",
+          "category_label": "Kultura",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "culture",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_culture_changed_0120a",
+          "type": "culture_changed",
+          "type_label": "Zmiana kultury",
+          "category": "culture",
+          "category_label": "Kultura",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "culture",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_faith_created_0120a",
+          "type": "faith_created",
+          "type_label": "Utworzenie wiary",
+          "category": "religion",
+          "category_label": "Religia",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "religion",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_faith_changed_0120a",
+          "type": "faith_changed",
+          "type_label": "Zmiana wiary",
+          "category": "religion",
+          "category_label": "Religia",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "religion",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_rank_demoted_0120a",
+          "type": "rank_demoted",
+          "type_label": "Spadek rangi",
+          "category": "titles",
+          "category_label": "Tytuły",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "titles",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_rank_promoted_0120a",
+          "type": "rank_promoted",
+          "type_label": "Awans rangi",
+          "category": "titles",
+          "category_label": "Tytuły",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "titles",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_primary_title_changed_0120a",
+          "type": "primary_title_changed",
+          "type_label": "Zmiana głównego tytułu",
+          "category": "titles",
+          "category_label": "Tytuły",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "titles",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_title_lost_0120a",
+          "type": "title_lost",
+          "type_label": "Utrata tytułu",
+          "category": "titles",
+          "category_label": "Tytuły",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "titles",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_title_granted_0120a",
+          "type": "title_granted",
+          "type_label": "Nadanie tytułu",
+          "category": "titles",
+          "category_label": "Tytuły",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "titles",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_title_created_0120a",
+          "type": "title_created",
+          "type_label": "Utworzenie tytułu",
+          "category": "titles",
+          "category_label": "Tytuły",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "titles",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_title_gained_0120a",
+          "type": "title_gained",
+          "type_label": "Zdobycie tytułu",
+          "category": "titles",
+          "category_label": "Tytuły",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "titles",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_territory_unchanged_0120a",
+          "type": "territory_unchanged",
+          "type_label": "Brak zmian terytorialnych",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_territory_lost_0120a",
+          "type": "territory_lost",
+          "type_label": "Utrata terytorium",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_territory_gained_0120a",
+          "type": "territory_gained",
+          "type_label": "Zdobycie terytorium",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_war_as_ally_0120a",
+          "type": "war_as_ally",
+          "type_label": "Udział w wojnie jako sojusznik",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_war_as_defender_0120a",
+          "type": "war_as_defender",
+          "type_label": "Udział w wojnie jako obrońca",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_war_as_attacker_0120a",
+          "type": "war_as_attacker",
+          "type_label": "Udział w wojnie jako atakujący",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_white_peace_0120a",
+          "type": "white_peace",
+          "type_label": "Biały pokój",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_war_lost_0120a",
+          "type": "war_lost",
+          "type_label": "Porażka w wojnie",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_war_won_0120a",
+          "type": "war_won",
+          "type_label": "Zwycięstwo w wojnie",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_war_ended_0120a",
+          "type": "war_ended",
+          "type_label": "Zakończenie wojny",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_war_started_0120a",
+          "type": "war_started",
+          "type_label": "Rozpoczęcie wojny",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "war",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_succession_0120a",
+          "type": "succession",
+          "type_label": "Sukcesja",
+          "category": "dynasty",
+          "category_label": "Dynastia",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "dynasty",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_heir_died_0120a",
+          "type": "heir_died",
+          "type_label": "Śmierć następcy",
+          "category": "dynasty",
+          "category_label": "Dynastia",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "dynasty",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_spouse_died_0120a",
+          "type": "spouse_died",
+          "type_label": "Śmierć małżonka",
+          "category": "dynasty",
+          "category_label": "Dynastia",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "dynasty",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_grandchild_died_0120a",
+          "type": "grandchild_died",
+          "type_label": "Śmierć wnuka",
+          "category": "dynasty",
+          "category_label": "Dynastia",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "dynasty",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_grandchild_born_0120a",
+          "type": "grandchild_born",
+          "type_label": "Narodziny wnuka",
+          "category": "dynasty",
+          "category_label": "Dynastia",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "dynasty",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_child_married_0120a",
+          "type": "child_married",
+          "type_label": "Małżeństwo dziecka",
+          "category": "dynasty",
+          "category_label": "Dynastia",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "dynasty",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_child_died_0120a",
+          "type": "child_died",
+          "type_label": "Śmierć dziecka",
+          "category": "dynasty",
+          "category_label": "Dynastia",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "dynasty",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_child_born_0120a",
+          "type": "child_born",
+          "type_label": "Narodziny dziecka",
+          "category": "dynasty",
+          "category_label": "Dynastia",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "dynasty",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_player_released_0120a",
+          "type": "player_released",
+          "type_label": "Zwolnienie z więzienia",
+          "category": "internal_politics",
+          "category_label": "Polityka wewnętrzna",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "internal_politics",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_player_imprisoned_0120a",
+          "type": "player_imprisoned",
+          "type_label": "Uwięzienie władcy",
+          "category": "internal_politics",
+          "category_label": "Polityka wewnętrzna",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "internal_politics",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_council_left_0120a",
+          "type": "council_left",
+          "type_label": "Odejście z rady",
+          "category": "internal_politics",
+          "category_label": "Polityka wewnętrzna",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "internal_politics",
+            "test_package": "yes"
+          }
+        },
+        {
+          "event_id": "TEST_P1_complete_council_joined_0120a",
+          "type": "council_joined",
+          "type_label": "Dołączenie do rady",
+          "category": "internal_politics",
+          "category_label": "Polityka wewnętrzna",
+          "date": "1 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 1,
+          "is_test": true,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.0-a",
+            "category": "internal_politics",
+            "test_package": "yes"
+          }
+        }
+      ]
     },
     "P2": {
       "events": []
