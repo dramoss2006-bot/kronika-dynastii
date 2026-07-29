@@ -1,0 +1,121 @@
+/* Publiczne dane kampanii P1/P2. */
+window.KD_ANALYZER_DATA = {
+  "schema": 2,
+  "campaign": {
+    "id": 16,
+    "name": "v0121-test3",
+    "created_at": "2026-07-29 21:07:54",
+    "last_import_at": "2026-07-29 21:32:30"
+  },
+  "players": {
+    "P1": {
+      "events": [
+        {
+          "event_id": "P1_council_joined_1",
+          "player": "P1",
+          "player_slot": "P1",
+          "type": "council_joined",
+          "type_label": "Dołączenie do rady",
+          "category": "internal_politics",
+          "category_label": "Polityka wewnętrzna",
+          "date": "15 lutego 874",
+          "year": 874,
+          "month": 2,
+          "day": 15,
+          "is_test": false,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.1-test3",
+            "category": "internal_politics"
+          },
+          "chronicle": {
+            "title": "Dołączenie do rady — Gracz I",
+            "text": "15 lutego 874 władca Gracz I dołączył do rady swojego seniora.",
+            "style": "short_chronicle",
+            "generator": "template-v0.1"
+          }
+        },
+        {
+          "event_id": "P1_council_left_1",
+          "player": "P1",
+          "player_slot": "P1",
+          "type": "council_left",
+          "type_label": "Odejście z rady",
+          "category": "internal_politics",
+          "category_label": "Polityka wewnętrzna",
+          "date": "22 czerwca 868",
+          "year": 868,
+          "month": 6,
+          "day": 22,
+          "is_test": false,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.1-test3",
+            "category": "internal_politics"
+          },
+          "chronicle": {
+            "title": "Odejście z rady — Gracz I",
+            "text": "22 czerwca 868 władca Gracz I opuścił radę swojego seniora.",
+            "style": "short_chronicle",
+            "generator": "template-v0.1"
+          }
+        }
+      ]
+    },
+    "P2": {
+      "events": []
+    }
+  },
+  "events": [
+    {
+      "event_id": "P1_council_joined_1",
+      "player": "P1",
+      "player_slot": "P1",
+      "type": "council_joined",
+      "type_label": "Dołączenie do rady",
+      "category": "internal_politics",
+      "category_label": "Polityka wewnętrzna",
+      "date": "15 lutego 874",
+      "year": 874,
+      "month": 2,
+      "day": 15,
+      "is_test": false,
+      "attributes": {
+        "schema": "1",
+        "mod": "0.12.1-test3",
+        "category": "internal_politics"
+      },
+      "chronicle": {
+        "title": "Dołączenie do rady — Gracz I",
+        "text": "15 lutego 874 władca Gracz I dołączył do rady swojego seniora.",
+        "style": "short_chronicle",
+        "generator": "template-v0.1"
+      }
+    },
+    {
+      "event_id": "P1_council_left_1",
+      "player": "P1",
+      "player_slot": "P1",
+      "type": "council_left",
+      "type_label": "Odejście z rady",
+      "category": "internal_politics",
+      "category_label": "Polityka wewnętrzna",
+      "date": "22 czerwca 868",
+      "year": 868,
+      "month": 6,
+      "day": 22,
+      "is_test": false,
+      "attributes": {
+        "schema": "1",
+        "mod": "0.12.1-test3",
+        "category": "internal_politics"
+      },
+      "chronicle": {
+        "title": "Odejście z rady — Gracz I",
+        "text": "22 czerwca 868 władca Gracz I opuścił radę swojego seniora.",
+        "style": "short_chronicle",
+        "generator": "template-v0.1"
+      }
+    }
+  ]
+};
