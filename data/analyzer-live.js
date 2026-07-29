@@ -5,11 +5,29 @@ window.KD_ANALYZER_DATA = {
     "id": 15,
     "name": "v0121-test2",
     "created_at": "2026-07-29 10:29:07",
-    "last_import_at": "2026-07-29 10:30:09"
+    "last_import_at": "2026-07-29 10:30:30"
   },
   "players": {
     "P1": {
-      "events": []
+      "events": [
+        {
+          "event_id": "P1_council_left_1",
+          "type": "council_left",
+          "type_label": "Odejście z rady",
+          "category": "internal_politics",
+          "category_label": "Polityka wewnętrzna",
+          "date": "2 stycznia 867",
+          "year": 867,
+          "month": 1,
+          "day": 2,
+          "is_test": false,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.1-test2",
+            "category": "internal_politics"
+          }
+        }
+      ]
     },
     "P2": {
       "events": []
