@@ -1,0 +1,48 @@
+{
+  "campaign": {
+    "name": "Beta — Kampania dwuosobowa",
+    "realm": "Test wpisów AI Kronikarza",
+    "currentDate": "14.03.1127"
+  },
+  "ruler": {
+    "name": "Beta AI",
+    "initial": "B"
+  },
+  "events": [
+    {
+      "type": "sukcesja",
+      "dateLabel": "14 marca 1127",
+      "player": "P1",
+      "importance": "major",
+      "title": "Zmiana władcy",
+      "description": "Starszy opis techniczny sukcesji.",
+      "chronicle": {
+        "title": "Sukcesja — Gracz I",
+        "text": "14 marca 1127 roku po królu Januszu władzę objął jego najstarszy syn Andrzej.",
+        "style": "short_chronicle",
+        "generator": "template-v0.1"
+      }
+    },
+    {
+      "type": "wojna",
+      "dateLabel": "2 czerwca 1128",
+      "player": "P2",
+      "importance": "major",
+      "title": "Zwycięstwo w wojnie",
+      "description": "Starszy opis techniczny wojny.",
+      "chronicle": {
+        "title": "Triumf — Gracz II",
+        "text": "Wojska Gracza II odniosły zwycięstwo, kończąc konflikt na korzystnych warunkach.",
+        "style": "short_chronicle",
+        "generator": "template-v0.1"
+      }
+    },
+    {
+      "type": "narodziny",
+      "dateLabel": "19 sierpnia 1128",
+      "player": "P1",
+      "title": "Narodziny potomka",
+      "description": "Na świat przyszło dziecko dynastii."
+    }
+  ]
+}
