@@ -4,11 +4,36 @@
     "id": 16,
     "name": "v0121-test3",
     "created_at": "2026-07-29 21:07:54",
-    "last_import_at": "2026-07-29 21:15:24"
+    "last_import_at": "2026-07-29 21:16:04"
   },
   "players": {
     "P1": {
       "events": [
+        {
+          "event_id": "P1_council_joined_1",
+          "player": "P1",
+          "player_slot": "P1",
+          "type": "council_joined",
+          "type_label": "Dołączenie do rady",
+          "category": "internal_politics",
+          "category_label": "Polityka wewnętrzna",
+          "date": "15 lutego 874",
+          "year": 874,
+          "month": 2,
+          "day": 15,
+          "is_test": false,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.1-test3",
+            "category": "internal_politics"
+          },
+          "chronicle": {
+            "title": "Dołączenie do rady — Gracz I",
+            "text": "15 lutego 874 władca Gracz I dołączył do rady swojego seniora.",
+            "style": "short_chronicle",
+            "generator": "template-v0.1"
+          }
+        },
         {
           "event_id": "P1_council_left_1",
           "player": "P1",
@@ -41,6 +66,31 @@
     }
   },
   "events": [
+    {
+      "event_id": "P1_council_joined_1",
+      "player": "P1",
+      "player_slot": "P1",
+      "type": "council_joined",
+      "type_label": "Dołączenie do rady",
+      "category": "internal_politics",
+      "category_label": "Polityka wewnętrzna",
+      "date": "15 lutego 874",
+      "year": 874,
+      "month": 2,
+      "day": 15,
+      "is_test": false,
+      "attributes": {
+        "schema": "1",
+        "mod": "0.12.1-test3",
+        "category": "internal_politics"
+      },
+      "chronicle": {
+        "title": "Dołączenie do rady — Gracz I",
+        "text": "15 lutego 874 władca Gracz I dołączył do rady swojego seniora.",
+        "style": "short_chronicle",
+        "generator": "template-v0.1"
+      }
+    },
     {
       "event_id": "P1_council_left_1",
       "player": "P1",
