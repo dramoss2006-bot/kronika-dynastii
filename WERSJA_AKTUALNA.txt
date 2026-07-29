@@ -1,0 +1,17 @@
+KRONIKA DYNASTII — AKTUALNA STRONA BEZ AI
+
+Wersja: v0.5 GITHUB P1/P2
+Status: aktualna wersja projektu strony po czasowym odłożeniu AI Kronikarza
+
+Główne dane kampanii:
+- data/campaign-data.js — dane wyglądu i przykładowej kampanii
+- data/analyzer-live.js — publiczne dane P1/P2 z Kronika Analyzer
+
+Publikacja:
+Wgraj zawartość tego folderu bezpośrednio do głównego katalogu repozytorium GitHub Pages.
+Plik index.html musi znajdować się w katalogu głównym.
+
+Nie używa:
+- chronicle.text
+- generatora AI
+- data/campaign.json jako głównego źródła strony
