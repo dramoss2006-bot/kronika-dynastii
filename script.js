@@ -107,22 +107,15 @@ function renderWars(d) {
 
 async function loadAnalyzerData() {
   try {
-    const response = await fetch(`data/campaign.json?v=${Date.now()}`, { cache: 'no-store' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const published = validateAnalyzerExport(await response.json());
-    analyzerData = published;
+    await loadFreshAnalyzerScript();
+    analyzerData = validateAnalyzerExport(window.KD_ANALYZER_DATA);
     analyzerData.__source = 'public';
     return;
   } catch (error) {
-    console.warn('Nie udało się pobrać data/campaign.json, używam pliku zapasowego:', error);
+    console.warn('Nie udało się pobrać świeżych danych data/analyzer-live.js:', error);
   }
 
   try {
-    if (window.KD_ANALYZER_DATA) {
-      analyzerData = validateAnalyzerExport(window.KD_ANALYZER_DATA);
-      analyzerData.__source = 'public';
-      return;
-    }
     const raw = localStorage.getItem(ANALYZER_STORAGE_KEY);
     analyzerData = raw ? validateAnalyzerExport(JSON.parse(raw)) : null;
     if (analyzerData) analyzerData.__source = 'local';
@@ -130,6 +123,20 @@ async function loadAnalyzerData() {
     console.warn('Nie udało się odczytać danych Analyzera:', error);
     analyzerData = null;
   }
+}
+
+function loadFreshAnalyzerScript() {
+  return new Promise((resolve, reject) => {
+    window.KD_ANALYZER_DATA = undefined;
+    const script = document.createElement('script');
+    script.src = `data/analyzer-live.js?v=${Date.now()}`;
+    script.async = true;
+    script.onload = () => window.KD_ANALYZER_DATA
+      ? resolve()
+      : reject(new Error('Plik analyzer-live.js nie ustawił window.KD_ANALYZER_DATA.'));
+    script.onerror = () => reject(new Error('Nie udało się załadować data/analyzer-live.js.'));
+    document.head.appendChild(script);
+  });
 }
 
 function validateAnalyzerExport(data) {
@@ -197,7 +204,7 @@ function renderPlayersData() {
   const total = p1.length + p2.length;
   const isPublic = analyzerData.__source === 'public';
   return pageHeader('Dane P1/P2', isPublic ? 'Wspólne dane kampanii opublikowane na stronie.' : 'Lokalny podgląd eksportu z Kronika Analyzer.') + `
-    <aside class="security-note"><strong>${isPublic ? 'Dane publiczne' : 'Podgląd lokalny'}</strong><p>${isPublic ? 'Te same wydarzenia widzą P1 i P2. Aktualizacja następuje automatycznie po opublikowaniu pliku data/campaign.json przez Kronika Analyzer.' : 'Ten import jest widoczny tylko w tej przeglądarce i nie zmienia publicznej strony.'}</p></aside>
+    <aside class="security-note"><strong>${isPublic ? 'Dane publiczne' : 'Podgląd lokalny'}</strong><p>${isPublic ? 'Te same wydarzenia widzą P1 i P2. Aktualizacja następuje automatycznie po opublikowaniu pliku data/analyzer-live.js przez Kronika Analyzer.' : 'Ten import jest widoczny tylko w tej przeglądarce i nie zmienia publicznej strony.'}</p></aside>
     <section class="player-summary-grid">
       <article class="stat-card campaign"><span class="eyebrow">Kampania</span><strong>${escapeHtml(campaign.name || 'Bez nazwy')}</strong><small>ID: ${escapeHtml(campaign.id ?? '—')}</small></article>
       <article class="stat-card"><span class="eyebrow">Gracz P1</span><strong>${p1.length}</strong><small>wydarzeń</small></article>
