@@ -5,11 +5,45 @@ window.KD_ANALYZER_DATA = {
     "id": 15,
     "name": "v0121-test2",
     "created_at": "2026-07-29 10:29:07",
-    "last_import_at": "2026-07-29 10:35:51"
+    "last_import_at": "2026-07-29 10:36:16"
   },
   "players": {
     "P1": {
       "events": [
+        {
+          "event_id": "P1_council_left_2",
+          "type": "council_left",
+          "type_label": "Odejście z rady",
+          "category": "internal_politics",
+          "category_label": "Polityka wewnętrzna",
+          "date": "22 lipca 872",
+          "year": 872,
+          "month": 7,
+          "day": 22,
+          "is_test": false,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.1-test2",
+            "category": "internal_politics"
+          }
+        },
+        {
+          "event_id": "P1_war_started_1",
+          "type": "war_started",
+          "type_label": "Rozpoczęcie wojny",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "27 czerwca 872",
+          "year": 872,
+          "month": 6,
+          "day": 27,
+          "is_test": false,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.1-test2",
+            "category": "war"
+          }
+        },
         {
           "event_id": "P1_council_joined_1",
           "type": "council_joined",
