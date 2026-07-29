@@ -105,7 +105,18 @@ function renderWars(d) {
 
 
 
-function readStoredAnalyzerData() {
+async function loadAnalyzerData() {
+  try {
+    const response = await fetch(`data/campaign.json?v=${Date.now()}`, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const published = validateAnalyzerExport(await response.json());
+    analyzerData = published;
+    analyzerData.__source = 'public';
+    return;
+  } catch (error) {
+    console.warn('Nie udało się pobrać data/campaign.json, używam pliku zapasowego:', error);
+  }
+
   try {
     if (window.KD_ANALYZER_DATA) {
       analyzerData = validateAnalyzerExport(window.KD_ANALYZER_DATA);
@@ -186,7 +197,7 @@ function renderPlayersData() {
   const total = p1.length + p2.length;
   const isPublic = analyzerData.__source === 'public';
   return pageHeader('Dane P1/P2', isPublic ? 'Wspólne dane kampanii opublikowane na stronie.' : 'Lokalny podgląd eksportu z Kronika Analyzer.') + `
-    <aside class="security-note"><strong>${isPublic ? 'Dane publiczne' : 'Podgląd lokalny'}</strong><p>${isPublic ? 'Te same wydarzenia widzą P1 i P2. Aktualizacja następuje po podmianie pliku data/analyzer-live.js w repozytorium GitHub.' : 'Ten import jest widoczny tylko w tej przeglądarce i nie zmienia publicznej strony.'}</p></aside>
+    <aside class="security-note"><strong>${isPublic ? 'Dane publiczne' : 'Podgląd lokalny'}</strong><p>${isPublic ? 'Te same wydarzenia widzą P1 i P2. Aktualizacja następuje automatycznie po opublikowaniu pliku data/campaign.json przez Kronika Analyzer.' : 'Ten import jest widoczny tylko w tej przeglądarce i nie zmienia publicznej strony.'}</p></aside>
     <section class="player-summary-grid">
       <article class="stat-card campaign"><span class="eyebrow">Kampania</span><strong>${escapeHtml(campaign.name || 'Bez nazwy')}</strong><small>ID: ${escapeHtml(campaign.id ?? '—')}</small></article>
       <article class="stat-card"><span class="eyebrow">Gracz P1</span><strong>${p1.length}</strong><small>wydarzeń</small></article>
@@ -328,5 +339,4 @@ document.querySelectorAll('.nav-tabs [data-view]').forEach(button => button.addE
 document.querySelector('.mobile-menu').addEventListener('click', () => document.querySelector('.nav-tabs').classList.toggle('open'));
 window.addEventListener('hashchange', () => showView(location.hash.slice(1) || 'home'));
 
-readStoredAnalyzerData();
-loadCampaign().then(() => showView(location.hash.slice(1) || 'home'));
+loadAnalyzerData().finally(() => loadCampaign().then(() => showView(location.hash.slice(1) || 'home')));
