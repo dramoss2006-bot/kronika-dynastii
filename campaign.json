@@ -1,0 +1,30 @@
+KRONIKA DYNASTII — STRONA v0.5.1 P1/P2 + AI KRONIKARZ
+
+PAKIET ZBUDOWANY NA PODSTAWIE:
+Kronika_Dynastii_Strona_v0.5_GITHUB_P1_P2
+
+ZACHOWANO:
+- pełny wygląd i wszystkie zakładki strony v0.5,
+- stronę główną, dynastie, postacie, kronikę, mapę, wojny, dane P1/P2, pobieranie i aktualizator,
+- paczki moda i Analyzera w folderze downloads,
+- pliki zgodności campaign-data.js i analyzer-live.js.
+
+DODANO:
+- automatyczne pobieranie data/campaign.json bez przeładowywania starych skryptów,
+- obsługę eksportu Analyzera z sekcjami players.P1/P2,
+- wspólną kronikę wydarzeń P1 i P2,
+- wyświetlanie event.chronicle.title i event.chronicle.text,
+- oznaczenia P1, P2 oraz „wpis kronikarski”,
+- zgodność wsteczną ze starą stroną i danymi testowymi.
+
+WDROŻENIE NA GITHUB:
+1. Rozpakuj ZIP.
+2. Wgraj CAŁĄ ZAWARTOŚĆ folderu do głównego katalogu repozytorium.
+3. Zachowaj strukturę folderów data oraz downloads.
+4. Zatwierdź zmiany przez Commit changes.
+5. W Analyzerze ustaw plik strony: data/campaign.json.
+6. Kliknij Sprawdź połączenie, następnie Opublikuj wybraną kampanię.
+7. Po wdrożeniu GitHub Pages odśwież stronę Ctrl+F5.
+
+WAŻNE:
+Nie usuwaj plików data/campaign-data.js oraz data/analyzer-live.js. Są zachowane jako awaryjna zgodność. Aktualnym plikiem publikowanym przez Analyzer jest data/campaign.json.
