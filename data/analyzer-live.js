@@ -5,7 +5,7 @@ window.KD_ANALYZER_DATA = {
     "id": 15,
     "name": "v0121-test2",
     "created_at": "2026-07-29 10:29:07",
-    "last_import_at": "2026-07-29 10:37:32"
+    "last_import_at": "2026-07-29 10:46:59"
   },
   "players": {
     "P1": {
@@ -25,6 +25,12 @@ window.KD_ANALYZER_DATA = {
             "schema": "1",
             "mod": "0.12.1-test2",
             "category": "internal_politics"
+          },
+          "chronicle": {
+            "title": "Uwięzienie władcy — Gracz I",
+            "text": "1 czerwca 874 odnotowano wydarzenie „Uwięzienie władcy” dotyczące Gracz I.",
+            "style": "short_chronicle",
+            "generator": "template-v0.1"
           }
         },
         {
@@ -42,6 +48,12 @@ window.KD_ANALYZER_DATA = {
             "schema": "1",
             "mod": "0.12.1-test2",
             "category": "internal_politics"
+          },
+          "chronicle": {
+            "title": "Odejście z rady — Gracz I",
+            "text": "22 lipca 872 władca Gracz I opuścił radę swojego seniora.",
+            "style": "short_chronicle",
+            "generator": "template-v0.1"
           }
         },
         {
@@ -59,6 +71,12 @@ window.KD_ANALYZER_DATA = {
             "schema": "1",
             "mod": "0.12.1-test2",
             "category": "war"
+          },
+          "chronicle": {
+            "title": "Rozpoczęcie wojny — Gracz I",
+            "text": "27 czerwca 872 Gracz I rozpoczął udział w wojnie.",
+            "style": "short_chronicle",
+            "generator": "template-v0.1"
           }
         },
         {
@@ -76,6 +94,12 @@ window.KD_ANALYZER_DATA = {
             "schema": "1",
             "mod": "0.12.1-test2",
             "category": "internal_politics"
+          },
+          "chronicle": {
+            "title": "Dołączenie do rady — Gracz I",
+            "text": "8 marca 867 władca Gracz I dołączył do rady swojego seniora.",
+            "style": "short_chronicle",
+            "generator": "template-v0.1"
           }
         },
         {
@@ -93,6 +117,12 @@ window.KD_ANALYZER_DATA = {
             "schema": "1",
             "mod": "0.12.1-test2",
             "category": "internal_politics"
+          },
+          "chronicle": {
+            "title": "Odejście z rady — Gracz I",
+            "text": "2 stycznia 867 władca Gracz I opuścił radę swojego seniora.",
+            "style": "short_chronicle",
+            "generator": "template-v0.1"
           }
         }
       ]
