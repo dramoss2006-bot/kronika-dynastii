@@ -5,11 +5,28 @@ window.KD_ANALYZER_DATA = {
     "id": 15,
     "name": "v0121-test2",
     "created_at": "2026-07-29 10:29:07",
-    "last_import_at": "2026-07-29 10:36:40"
+    "last_import_at": "2026-07-29 10:37:32"
   },
   "players": {
     "P1": {
       "events": [
+        {
+          "event_id": "P1_player_imprisoned_1",
+          "type": "player_imprisoned",
+          "type_label": "Uwięzienie władcy",
+          "category": "internal_politics",
+          "category_label": "Polityka wewnętrzna",
+          "date": "1 czerwca 874",
+          "year": 874,
+          "month": 6,
+          "day": 1,
+          "is_test": false,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.12.1-test2",
+            "category": "internal_politics"
+          }
+        },
         {
           "event_id": "P1_council_left_2",
           "type": "council_left",
