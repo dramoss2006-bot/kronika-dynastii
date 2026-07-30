@@ -5,11 +5,28 @@ window.KD_ANALYZER_DATA = {
     "id": 18,
     "name": "betatest multiplayer",
     "created_at": "2026-07-30 18:38:14",
-    "last_import_at": "2026-07-30 19:35:08"
+    "last_import_at": "2026-07-30 19:36:13"
   },
   "players": {
     "P1": {
       "events": [
+        {
+          "event_id": "P1_war_started_5",
+          "type": "war_started",
+          "type_label": "Rozpoczęcie wojny",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "25 czerwca 873",
+          "year": 873,
+          "month": 6,
+          "day": 25,
+          "is_test": false,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.13.0-beta1",
+            "category": "war"
+          }
+        },
         {
           "event_id": "P1_war_won_4",
           "type": "war_won",
