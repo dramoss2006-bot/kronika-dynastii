@@ -5,7 +5,7 @@ window.KD_ANALYZER_DATA = {
     "id": 18,
     "name": "betatest multiplayer",
     "created_at": "2026-07-30 18:38:14",
-    "last_import_at": "2026-07-30 19:30:18"
+    "last_import_at": "2026-07-30 19:31:13"
   },
   "players": {
     "P1": {
