@@ -5,7 +5,7 @@ window.KD_ANALYZER_DATA = {
     "id": 18,
     "name": "betatest multiplayer",
     "created_at": "2026-07-30 18:38:14",
-    "last_import_at": "2026-07-30 19:10:25"
+    "last_import_at": "2026-07-30 19:11:16"
   },
   "players": {
     "P1": {
@@ -31,6 +31,40 @@ window.KD_ANALYZER_DATA = {
     },
     "P2": {
       "events": [
+        {
+          "event_id": "P2_war_won_2",
+          "type": "war_won",
+          "type_label": "Zwycięstwo w wojnie",
+          "category": "war",
+          "category_label": "Wojny",
+          "date": "31 grudnia 867",
+          "year": 867,
+          "month": 12,
+          "day": 31,
+          "is_test": false,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.13.0-beta1",
+            "category": "war"
+          }
+        },
+        {
+          "event_id": "P2_title_gained_1",
+          "type": "title_gained",
+          "type_label": "Zdobycie tytułu",
+          "category": "titles",
+          "category_label": "Tytuły",
+          "date": "31 grudnia 867",
+          "year": 867,
+          "month": 12,
+          "day": 31,
+          "is_test": false,
+          "attributes": {
+            "schema": "1",
+            "mod": "0.13.0-beta1",
+            "category": "titles"
+          }
+        },
         {
           "event_id": "P2_war_started_2",
           "type": "war_started",
