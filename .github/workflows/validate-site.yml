@@ -1,0 +1,30 @@
+name: Walidacja strony
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+
+      - name: Skonfiguruj Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Sprawdź składnię JavaScript
+        run: |
+          node --check script.js
+          node --check data/campaign-data.js
+          node --check data/analyzer-live.js
+
+      - name: Sprawdź strukturę strony i danych
+        run: node tests/validate-site.mjs
+
