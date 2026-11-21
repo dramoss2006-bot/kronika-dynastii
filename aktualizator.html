@@ -16,7 +16,7 @@
 <body>
 <main>
   <h1>Aktualizator danych P1/P2</h1>
-  <p>To narzędzie nie wysyła danych do internetu. Tworzy gotowy plik <code>analyzer-live.js</code>, który należy wgrać do repozytorium GitHub.</p>
+  <p>To narzędzie nie wysyła danych do internetu. Sprawdza eksport Analyzera i przygotowuje prawidłowy plik <code>campaign.json</code> do publikacji.</p>
   <div class="box">
     <h2>Krok 1</h2>
     <label>Wybierz eksport JSON z Analyzera
@@ -26,8 +26,8 @@
   </div>
   <div class="box">
     <h2>Krok 2</h2>
-    <button id="download" disabled>Pobierz analyzer-live.js</button>
-    <p>Potem w repozytorium otwórz folder <code>data</code>, usuń starą wersję i wgraj ten plik pod dokładnie tą samą nazwą.</p>
+    <button id="download" disabled>Pobierz campaign.json</button>
+    <p>Potem w repozytorium zastąp plik <code>data/campaign.json</code>. Gałąź <code>main</code> aktualizuj dopiero po przejściu walidacji.</p>
   </div>
   <p><a href="index.html#players" style="color:#d7a84b">← Wróć do strony</a></p>
 </main>
@@ -48,7 +48,7 @@ document.getElementById('file').addEventListener('change', async e => {
     if (!file) return;
     const data = JSON.parse(await file.text());
     validate(data);
-    prepared = '/* Publiczne dane kampanii P1/P2. */\nwindow.KD_ANALYZER_DATA = ' + JSON.stringify(data, null, 2) + ';\n';
+    prepared = JSON.stringify(data, null, 2) + '\n';
     status.className = 'ok';
     status.textContent = `Gotowe: ${data.campaign.name || 'kampania'} — P1: ${data.players.P1.events.length}, P2: ${data.players.P2.events.length}.`;
     download.disabled = false;
@@ -61,14 +61,15 @@ document.getElementById('file').addEventListener('change', async e => {
 });
 
 download.addEventListener('click', () => {
-  const blob = new Blob([prepared], {type:'text/javascript;charset=utf-8'});
+  const blob = new Blob([prepared], {type:'application/json;charset=utf-8'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'analyzer-live.js';
+  a.download = 'campaign.json';
   a.click();
   URL.revokeObjectURL(url);
 });
 </script>
 </body>
 </html>
+
