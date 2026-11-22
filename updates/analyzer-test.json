@@ -2,14 +2,14 @@
   "schema_version": 1,
   "product": "kronika-analyzer",
   "channel": "test",
-  "version": "1.3.0-test2",
-  "published_at": "2026-11-22T16:18:24.0284987+01:00",
+  "version": "1.3.0-test3",
+  "published_at": "2026-11-22T16:45:41.7211131+01:00",
   "minimum_updater_version": "1.2.0",
-  "release_notes_url": "https://github.com/dramoss2006-bot/kronika-dynastii/releases/tag/analyzer-1.3.0-test2",
+  "release_notes_url": "https://github.com/dramoss2006-bot/kronika-dynastii/releases/tag/analyzer-1.3.0-test3",
   "package": {
-    "url": "https://github.com/dramoss2006-bot/kronika-dynastii/releases/download/analyzer-1.3.0-test2/KronikaAnalyzer_Setup_1.3.0-test2.exe",
-    "sha256": "A10C16671A3C93EBE5F12436C1B591B35F42ED52657882E3787C07F2FD245D0D",
-    "size_bytes": 26355584,
+    "url": "https://github.com/dramoss2006-bot/kronika-dynastii/releases/download/analyzer-1.3.0-test3/KronikaAnalyzer_Setup_1.3.0-test3.exe",
+    "sha256": "D88B1B590C582E086E597318FC362B6435AF9B5F00F127EE60AF84554BE1DF66",
+    "size_bytes": 26354261,
     "authenticode_required": false
   }
 }
