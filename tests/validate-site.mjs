@@ -28,7 +28,12 @@ assert(campaign.players && typeof campaign.players === 'object', 'Brakuje sekcji
 const eventIds = new Map();
 const warnings = [];
 for (const player of ['P1', 'P2']) {
-  const events = campaign.players[player]?.events;
+  const playerData = campaign.players[player];
+  assert(playerData && typeof playerData === 'object', `Brakuje sekcji players.${player}.`);
+  assert(playerData.profile && typeof playerData.profile === 'object', `Brakuje players.${player}.profile.`);
+  assert(playerData.statistics && typeof playerData.statistics === 'object', `Brakuje players.${player}.statistics.`);
+  assert(typeof playerData.report_date === 'string', `Brakuje players.${player}.report_date.`);
+  const events = playerData.events;
   assert(Array.isArray(events), `Brakuje tablicy players.${player}.events.`);
   for (const event of events) {
     assert(event && typeof event === 'object', `${player}: wydarzenie nie jest obiektem.`);
@@ -45,8 +50,24 @@ for (const player of ['P1', 'P2']) {
   }
 }
 
+const p1Data = campaign.players.P1;
+for (const field of ['character', 'dynasty', 'house', 'primary_title', 'faith', 'culture']) {
+  assert(typeof p1Data.profile[field] === 'string' && p1Data.profile[field].length > 0,
+    `P1: brak wartości profile.${field}.`);
+}
+assert(p1Data.profile.character === 'Król Helgi (Gardariki)', 'P1: nieoczekiwana postać w danych testowych.');
+assert(p1Data.profile.dynasty === 'Rurykowicz', 'P1: nieoczekiwana dynastia w danych testowych.');
+assert(p1Data.report_date === '10 lutego 867', 'P1: nieoczekiwana data raportu.');
+assert(p1Data.statistics.successions === 1, 'P1: licznik sukcesji powinien wynosić 1.');
+assert(p1Data.statistics.white_peace === 2, 'P1: licznik białych pokojów powinien wynosić 2.');
+
+const p2Data = campaign.players.P2;
+assert(Object.values(p2Data.profile).every(value => value === ''), 'P2: test multiplayer nie był wykonywany, profil powinien być pusty.');
+assert(p2Data.events.length === 0, 'P2: test multiplayer nie był wykonywany, lista wydarzeń powinna być pusta.');
+
 assert(/fetch\(`data\/campaign\.json/.test(scriptJs), 'script.js nie pobiera data/campaign.json.');
 assert(/validateAnalyzerExport/.test(scriptJs), 'script.js nie waliduje danych Analyzera.');
+assert(/playerDynastyCardMarkup/.test(scriptJs), 'script.js nie renderuje kart dynastii graczy.');
 
 const localAssets = [...indexHtml.matchAll(/(?:src|href)="([^"]+)"/g)]
   .map(([, value]) => value.split(/[?#]/, 1)[0])

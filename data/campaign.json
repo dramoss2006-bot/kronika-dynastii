@@ -4,10 +4,30 @@
     "id": 8,
     "name": "E2E natural hooks 2026-11-21",
     "created_at": "2026-11-21 22:28:34",
-    "last_import_at": "2026-11-21 22:28:49"
+    "last_import_at": "2026-11-22 13:59:48"
   },
   "players": {
     "P1": {
+      "profile": {
+        "character": "Król Helgi (Gardariki)",
+        "dynasty": "Rurykowicz",
+        "house": "Rurykowicz",
+        "primary_title": "Gardariki",
+        "faith": "Słowiańska prawda",
+        "culture": "Nordycka"
+      },
+      "statistics": {
+        "children_born": 0,
+        "grandchildren_born": 0,
+        "successions": 1,
+        "wars_won": 0,
+        "white_peace": 2,
+        "titles_gained": 0,
+        "titles_created": 1,
+        "faith_changes": 1,
+        "culture_changes": 0
+      },
+      "report_date": "10 lutego 867",
       "events": [
         {
           "event_id": "P1_war_started_2",
@@ -62,6 +82,26 @@
       ]
     },
     "P2": {
+      "profile": {
+        "character": "",
+        "dynasty": "",
+        "house": "",
+        "primary_title": "",
+        "faith": "",
+        "culture": ""
+      },
+      "statistics": {
+        "children_born": 0,
+        "grandchildren_born": 0,
+        "successions": 0,
+        "wars_won": 0,
+        "white_peace": 0,
+        "titles_gained": 0,
+        "titles_created": 0,
+        "faith_changes": 0,
+        "culture_changes": 0
+      },
+      "report_date": "",
       "events": []
     }
   },

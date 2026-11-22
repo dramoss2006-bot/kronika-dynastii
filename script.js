@@ -34,10 +34,43 @@ function crest(dynasty) {
   return `<div class="crest ${dynasty.color}">${dynasty.symbol}</div>`;
 }
 
+function playerDynastyCardMarkup(playerId, playerData = {}) {
+  const profile = playerData.profile || {};
+  const statistics = playerData.statistics || {};
+  const dynasty = profile.dynasty || `Dynastia gracza ${playerId}`;
+  const ruler = profile.character || 'Dane władcy pojawią się po wygenerowaniu nowego raportu CK3.';
+  const metrics = [
+    ['children_born', 'Dzieci'],
+    ['grandchildren_born', 'Wnuki'],
+    ['successions', 'Sukcesje'],
+    ['wars_won', 'Wygrane wojny'],
+    ['titles_gained', 'Zdobyte tytuły'],
+    ['titles_created', 'Utworzone tytuły'],
+  ];
+  return `
+    <article class="dynasty-profile-card ${playerId.toLowerCase()}">
+      <div class="dynasty-profile-heading">
+        <div class="crest ${playerId === 'P1' ? 'red' : 'blue'}">${playerId === 'P1' ? '♔' : '♚'}</div>
+        <div><span class="eyebrow">Gracz ${playerId}</span><h2>${escapeHtml(dynasty)}</h2><p>${escapeHtml(ruler)}</p></div>
+      </div>
+      <dl class="dynasty-profile-details">
+        <div><dt>Ród</dt><dd>${escapeHtml(profile.house || '—')}</dd></div>
+        <div><dt>Główny tytuł</dt><dd>${escapeHtml(profile.primary_title || '—')}</dd></div>
+        <div><dt>Wiara</dt><dd>${escapeHtml(profile.faith || '—')}</dd></div>
+        <div><dt>Kultura</dt><dd>${escapeHtml(profile.culture || '—')}</dd></div>
+        <div><dt>Stan raportu</dt><dd>${escapeHtml(playerData.report_date || '—')}</dd></div>
+      </dl>
+      <div class="dynasty-profile-metrics">${metrics.map(([key, label]) => `<div><b>${escapeHtml(statistics[key] ?? 0)}</b><span>${label}</span></div>`).join('')}</div>
+    </article>`;
+}
+
 function renderAll() {
   const d = campaignData;
-  document.getElementById('ruler-name').textContent = d.ruler.name;
-  document.getElementById('ruler-initial').textContent = d.ruler.initial;
+  const liveRulerName = analyzerData?.players?.P1?.profile?.character;
+  const rulerName = liveRulerName || d.ruler.name;
+  document.getElementById('ruler-name').textContent = rulerName;
+  document.getElementById('ruler-initial').textContent =
+    (rulerName.trim().charAt(0) || d.ruler.initial).toUpperCase();
   document.getElementById('view-home').innerHTML = renderHome(d);
   document.getElementById('view-dynasties').innerHTML = renderDynasties(d);
   document.getElementById('view-characters').innerHTML = renderCharacters(d);
@@ -72,6 +105,12 @@ function renderHome(d) {
 }
 
 function renderDynasties(d) {
+  if (analyzerData && analyzerData.players) {
+    const cards = ['P1', 'P2']
+      .map(playerId => playerDynastyCardMarkup(playerId, analyzerData.players[playerId]))
+      .join('');
+    return pageHeader('Karty dynastii', 'Rzeczywiste dane z ostatnich raportów CK3.') + `<div class="dynasty-profile-grid">${cards}</div>`;
+  }
   const cards = d.dynasties.map(item => `<article class="detail-card dynasty-detail">${crest(item)}<div><span class="eyebrow">Dynastia</span><h2>${item.name}</h2><p><strong>Głowa rodu:</strong> ${item.head}</p><p><strong>Prestiż:</strong> ${item.prestige}</p><blockquote>„${item.motto}”</blockquote></div></article>`).join('');
   return pageHeader('Dynastie', 'Rody, które kształtują losy kampanii.') + `<div class="detail-grid">${cards}</div>`;
 }
@@ -192,8 +231,10 @@ function renderPlayersData() {
   }
 
   const campaign = analyzerData.campaign || {};
-  const p1 = analyzerData.players.P1.events || [];
-  const p2 = analyzerData.players.P2.events || [];
+  const p1Data = analyzerData.players.P1 || {};
+  const p2Data = analyzerData.players.P2 || {};
+  const p1 = p1Data.events || [];
+  const p2 = p2Data.events || [];
   const total = p1.length + p2.length;
   const isPublic = analyzerData.__source === 'public';
   return pageHeader('Dane P1/P2', isPublic ? 'Wspólne dane kampanii opublikowane na stronie.' : 'Lokalny podgląd eksportu z Kronika Analyzer.') + `
@@ -211,8 +252,8 @@ function renderPlayersData() {
     </div>
     <div id="import-message" class="import-message" aria-live="polite"></div>
     <section class="players-columns">
-      <article class="panel player-panel"><div class="panel-title"><h3>Gracz P1</h3><span>${p1.length} wydarzeń</span></div><div class="player-events">${playerEventsMarkup('P1', p1)}</div></article>
-      <article class="panel player-panel"><div class="panel-title"><h3>Gracz P2</h3><span>${p2.length} wydarzeń</span></div><div class="player-events">${playerEventsMarkup('P2', p2)}</div></article>
+      <article class="panel player-panel"><div class="panel-title"><h3>Gracz P1</h3><span>${p1.length} wydarzeń</span></div>${playerDynastyCardMarkup('P1', p1Data)}<div class="player-events">${playerEventsMarkup('P1', p1)}</div></article>
+      <article class="panel player-panel"><div class="panel-title"><h3>Gracz P2</h3><span>${p2.length} wydarzeń</span></div>${playerDynastyCardMarkup('P2', p2Data)}<div class="player-events">${playerEventsMarkup('P2', p2)}</div></article>
     </section>`;
 }
 
