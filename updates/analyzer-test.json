@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "product": "kronika-analyzer",
+  "channel": "test",
+  "version": "1.2.0-test11",
+  "published_at": "2026-11-22T12:38:41.5128648+01:00",
+  "minimum_updater_version": "1.2.0",
+  "release_notes_url": "https://github.com/dramoss2006-bot/kronika-dynastii/releases/tag/analyzer-v1.2.0-test11",
+  "package": {
+    "url": "https://github.com/dramoss2006-bot/kronika-dynastii/releases/download/analyzer-v1.2.0-test11/KronikaAnalyzer_Setup_1.2.0-test11.exe",
+    "sha256": "27B7D186945270EC349B43C84133AB05F9E620BE2461AF48DA42B8686E8BEDA1",
+    "size_bytes": 26339215,
+    "authenticode_required": false
+  }
+}
