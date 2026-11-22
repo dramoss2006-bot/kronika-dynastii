@@ -67,10 +67,29 @@ button{font:inherit}.page-shell{display:flex;min-height:100vh}.side-banner{width
 .player-badge.p2 { background: rgba(31, 71, 116, .14); color: #1f4774; }
 .test-badge { background: rgba(126, 96, 25, .15); color: #725313; }
 .empty-player-state { padding: 2rem 1rem; text-align: center; opacity: .7; border: 1px dashed rgba(102, 78, 42, .25); border-radius: 9px; }
+.dynasty-profile-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.dynasty-profile-card { padding: 1.15rem; border: 1px solid var(--line); background: linear-gradient(145deg, #1d1d18, #11120f); box-shadow: inset 0 0 0 1px #000, 0 8px 20px #0005; }
+.dynasty-profile-heading { display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #3f3424; }
+.dynasty-profile-heading .crest { flex: 0 0 auto; }
+.dynasty-profile-heading h2 { margin: 0; color: #e7cf9a; font-family: 'Cinzel'; font-size: 1.4rem; }
+.dynasty-profile-heading p { margin: .25rem 0 0; color: var(--muted); }
+.dynasty-profile-details { margin: .8rem 0; }
+.dynasty-profile-details div { display: flex; justify-content: space-between; gap: 1.25rem; padding: .38rem 0; border-bottom: 1px solid #30291d; }
+.dynasty-profile-details dt { color: var(--muted); }
+.dynasty-profile-details dd { margin: 0; text-align: right; color: #ead8b2; }
+.dynasty-profile-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: .45rem; }
+.dynasty-profile-metrics div { padding: .65rem .45rem; text-align: center; border: 1px solid #463821; background: #141510; }
+.dynasty-profile-metrics b, .dynasty-profile-metrics span { display: block; }
+.dynasty-profile-metrics b { color: #e7cf9a; font-size: 1.25rem; }
+.dynasty-profile-metrics span { color: var(--muted); font-size: .78rem; }
+.player-panel > .dynasty-profile-card { margin: .8rem; box-shadow: none; }
+.player-panel .player-events { padding: 0 .8rem .8rem; }
 @media (max-width: 900px) {
   .player-summary-grid { grid-template-columns: 1fr 1fr; }
   .players-columns { grid-template-columns: 1fr; }
+  .dynasty-profile-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .player-summary-grid { grid-template-columns: 1fr; }
+  .dynasty-profile-metrics { grid-template-columns: repeat(2, 1fr); }
 }
